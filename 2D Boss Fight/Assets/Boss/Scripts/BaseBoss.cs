@@ -24,9 +24,19 @@ public class BaseBoss : StateMachineBehaviour
 
     [Tooltip("The type of movement along the X axis that the boss performs.")]
     public MovementType movementTypeX;
+    public float movementRelativeToEnemyX;
+    public float movementRelativeToPlayerX;
+    public float movementMinRandomX;
+    public float movementMaxRandomX;
+    public float movementSetX;
 
     [Tooltip("The type of movement along the Y axis that the boss performs.")]
     public MovementType movementTypeY;
+    public float movementRelativeToEnemyY;
+    public float movementRelativeToPlayerY;
+    public float movementMinRandomY;
+    public float movementMaxRandomY;
+    public float movementSetY;
 
     public enum MovementType
     {
@@ -36,21 +46,6 @@ public class BaseBoss : StateMachineBehaviour
         Set,
         Random
     }
-
-    public float relativeToEnemyX;
-    public float relativeToEnemyY;
-
-    public float relativeToPlayerX;
-    public float relativeToPlayerY;
-
-    public float minRandomX;
-    public float maxRandomX;
-    
-    public float minRandomY;
-    public float maxRandomY;
-
-    public float setX;
-    public float setY;
 
     [Tooltip("The method in which the boss will transition into its attack.")]
     public TransitionType transitionType;
@@ -194,31 +189,31 @@ public class BaseBoss : StateMachineBehaviour
             case MovementType.RelativeToEnemy:
                 if (IsFacingRight())
                 {
-                    destination.x = enemyPos.position.x + relativeToEnemyX;
+                    destination.x = enemyPos.position.x + movementRelativeToEnemyX;
                 }
                 else
                 {
-                    destination.x = enemyPos.position.x - relativeToEnemyX;
+                    destination.x = enemyPos.position.x - movementRelativeToEnemyX;
                 }
                 break;
 
             case MovementType.RelativeToPlayer:
                 if (IsFacingRight())
                 {
-                    destination.x = playerPos.position.x + relativeToPlayerX;
+                    destination.x = playerPos.position.x + movementRelativeToPlayerX;
                 }
                 else
                 {
-                    destination.x = playerPos.position.x - relativeToPlayerX;
+                    destination.x = playerPos.position.x - movementRelativeToPlayerX;
                 }
                 break;
 
             case MovementType.Set:
-                destination.x = setX;
+                destination.x = movementSetX;
                 break;
 
             case MovementType.Random:
-                destination.x = Random.Range(minRandomX, maxRandomX);
+                destination.x = Random.Range(movementMinRandomX, movementMaxRandomX);
                 break;
         }
 
@@ -230,20 +225,20 @@ public class BaseBoss : StateMachineBehaviour
                 break;
 
             case MovementType.RelativeToEnemy:
-                destination.y = enemyPos.position.y + relativeToEnemyY;
+                destination.y = enemyPos.position.y + movementRelativeToEnemyY;
                 break;
 
             case MovementType.RelativeToPlayer:
-                destination.y = playerPos.position.y + relativeToPlayerY;
+                destination.y = playerPos.position.y + movementRelativeToPlayerY;
 
                 break;
 
             case MovementType.Set:
-                destination.y = setY;
+                destination.y = movementSetY;
                 break;
 
             case MovementType.Random:
-                destination.y = Random.Range(minRandomY, maxRandomY);
+                destination.y = Random.Range(movementMinRandomY, movementMaxRandomY);
                 break;
         }
     }

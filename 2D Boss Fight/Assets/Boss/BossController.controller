@@ -71,17 +71,17 @@ MonoBehaviour:
   speed: 0
   directionType: 0
   movementTypeX: 0
+  movementRelativeToEnemyX: 0
+  movementRelativeToPlayerX: 0
+  movementMinRandomX: 0
+  movementMaxRandomX: 0
+  movementSetX: 0
   movementTypeY: 0
-  relativeToEnemyX: 0
-  relativeToEnemyY: 0
-  relativeToPlayerX: 0
-  relativeToPlayerY: 0
-  minRandomX: 0
-  maxRandomX: 0
-  minRandomY: 0
-  maxRandomY: 0
-  setX: 0
-  setY: 0
+  movementRelativeToEnemyY: 0
+  movementRelativeToPlayerY: 0
+  movementMinRandomY: 0
+  movementMaxRandomY: 0
+  movementSetY: 0
   transitionType: 0
   visionRange: 5
   timeTillIdle: 1
@@ -177,17 +177,17 @@ MonoBehaviour:
   speed: 0
   directionType: 0
   movementTypeX: 0
+  movementRelativeToEnemyX: 0
+  movementRelativeToPlayerX: 0
+  movementMinRandomX: 0
+  movementMaxRandomX: 0
+  movementSetX: 0
   movementTypeY: 0
-  relativeToEnemyX: 0
-  relativeToEnemyY: 0
-  relativeToPlayerX: 0
-  relativeToPlayerY: 0
-  minRandomX: 0
-  maxRandomX: 0
-  minRandomY: 0
-  maxRandomY: 0
-  setX: 0
-  setY: 0
+  movementRelativeToEnemyY: 0
+  movementRelativeToPlayerY: 0
+  movementMinRandomY: 0
+  movementMaxRandomY: 0
+  movementSetY: 0
   transitionType: 0
   startTimeTillNextAnimation: 0
   numberOfAttacks: 0
@@ -195,7 +195,21 @@ MonoBehaviour:
   startTimeBetweenAttacks: 0
   attackPrefab: {fileID: 0}
   spawnTimingType: 0
-  spawnType: 6
+  spawnType: 0
+  spawnRelativeToPlayerX: 0
+  spawnRelativeToPlayerY: 0
+  spawnRelativeToEnemyX: 0
+  spawnRelativeToEnemyY: 0
+  spawnMinRandomX: 0
+  spawnMaxRandomX: 0
+  spawnMinRandomY: 0
+  spawnMaxRandomY: 0
+  spawnSetX: 0
+  spawnSetY: 0
+  spawnStartIncrementX: 0
+  spawnStartIncrementY: 0
+  spawnIncrementalDistance: 0
+  spawnCircleAmplitude: 0
 --- !u!114 &9093821973803915801
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,17 +226,17 @@ MonoBehaviour:
   speed: 0
   directionType: 0
   movementTypeX: 2
+  movementRelativeToEnemyX: 0
+  movementRelativeToPlayerX: 0
+  movementMinRandomX: 0
+  movementMaxRandomX: 0
+  movementSetX: 0
   movementTypeY: 0
-  relativeToEnemyX: 0
-  relativeToEnemyY: 0
-  relativeToPlayerX: 0
-  relativeToPlayerY: 0
-  minRandomX: 0
-  maxRandomX: 0
-  minRandomY: 0
-  maxRandomY: 0
-  setX: 0
-  setY: 0
+  movementRelativeToEnemyY: 0
+  movementRelativeToPlayerY: 0
+  movementMinRandomY: 0
+  movementMaxRandomY: 0
+  movementSetY: 0
   transitionType: 0
   attackList: []
   minStartTimeTillAttack: 0.5

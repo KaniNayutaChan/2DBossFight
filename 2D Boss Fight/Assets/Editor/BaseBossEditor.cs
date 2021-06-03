@@ -12,20 +12,20 @@ public class BassBossEditor : Editor
     //Add the ShowOnEnum methods in here
     public virtual void SetFieldCondition()
     {
-        ShowOnEnum("movementTypeX", "RelativeToEnemy", "relativeToEnemyX");
-        ShowOnEnum("movementTypeY", "RelativeToEnemy", "relativeToEnemyY");
+        ShowOnEnum("movementTypeX", "RelativeToEnemy", "movementRelativeToEnemyX");
+        ShowOnEnum("movementTypeY", "RelativeToEnemy", "movementRelativeToEnemyY");
 
-        ShowOnEnum("movementTypeX", "RelativeToPlayer", "relativeToPlayerX");
-        ShowOnEnum("movementTypeY", "RelativeToPlayer", "relativeToPlayerY");
+        ShowOnEnum("movementTypeX", "RelativeToPlayer", "movementRelativeToPlayerX");
+        ShowOnEnum("movementTypeY", "RelativeToPlayer", "movementRelativeToPlayerY");
 
-        ShowOnEnum("movementTypeX", "Set", "setX");
-        ShowOnEnum("movementTypeY", "Set", "setY");
+        ShowOnEnum("movementTypeX", "Set", "movementSetX");
+        ShowOnEnum("movementTypeY", "Set", "movementSetY");
 
-        ShowOnEnum("movementTypeX", "Random", "minRandomX");
-        ShowOnEnum("movementTypeY", "Random", "minRandomY");
+        ShowOnEnum("movementTypeX", "Random", "movementMinRandomX");
+        ShowOnEnum("movementTypeY", "Random", "movementMinRandomY");
 
-        ShowOnEnum("movementTypeX", "Random", "maxRandomX");
-        ShowOnEnum("movementTypeY", "Random", "maxRandomY");
+        ShowOnEnum("movementTypeX", "Random", "movementMaxRandomX");
+        ShowOnEnum("movementTypeY", "Random", "movementMaxRandomY");
     }
 
     /////////////////////////////////////////////////////////

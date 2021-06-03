@@ -21,13 +21,28 @@ public class BaseBossAttack : BaseBoss
     }
 
     public SpawnType spawnType;
+    public float spawnRelativeToPlayerX;
+    public float spawnRelativeToPlayerY;
+    public float spawnRelativeToEnemyX;
+    public float spawnRelativeToEnemyY;
+    public float spawnMinRandomX;
+    public float spawnMaxRandomX;
+    public float spawnMinRandomY;
+    public float spawnMaxRandomY;
+    public float spawnSetX;
+    public float spawnSetY;
+    public float spawnStartIncrementX;
+    public float spawnStartIncrementY;
+    public float spawnIncrementalDistance;
+    public float spawnCircleAmplitude;
+
     public enum SpawnType
     {
         NoSpawn,
         RelativeToPlayer,
         RelativeToEnemy,
         RandomPosition,
-        SetPosition,
+        Set,
         InIncrements,
         InCircle
     }

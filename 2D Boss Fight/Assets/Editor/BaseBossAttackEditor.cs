@@ -14,33 +14,26 @@ public class BaseBossAttackEditor : BassBossEditor
     {
         base.SetFieldCondition();
 
-        ShowOnEnum("spawnType", "RelativeToEnemy", "numberOfAttacks");
-        ShowOnEnum("spawnType", "RelativeToPlayer", "numberOfAttacks");
-        ShowOnEnum("spawnType", "RandomPosition", "numberOfAttacks");
-        ShowOnEnum("spawnType", "SetPosition", "numberOfAttacks");
-        ShowOnEnum("spawnType", "InIncrements", "numberOfAttacks");
-        ShowOnEnum("spawnType", "InCircle", "numberOfAttacks");
+        ShowOnEnum("spawnType", "RelativeToPlayer", "spawnRelativeToPlayerX");
+        ShowOnEnum("spawnType", "RelativeToPlayer", "spawnRelativeToPlayerY");
 
-        ShowOnEnum("spawnType", "RelativeToEnemy", "startTimeTillAttack");
-        ShowOnEnum("spawnType", "RelativeToPlayer", "startTimeTillAttack");
-        ShowOnEnum("spawnType", "RandomPosition", "startTimeTillAttack");
-        ShowOnEnum("spawnType", "SetPosition", "startTimeTillAttack");
-        ShowOnEnum("spawnType", "InIncrements", "startTimeTillAttack");
-        ShowOnEnum("spawnType", "InCircle", "startTimeTillAttack");
+        ShowOnEnum("spawnType", "RelativeToEnemy", "spawnRelativeToEnemyX");
+        ShowOnEnum("spawnType", "RelativeToEnemy", "spawnRelativeToEnemyY");
 
-        ShowOnEnum("spawnType", "RelativeToEnemy", "startTimeBetweenAttacks");
-        ShowOnEnum("spawnType", "RelativeToPlayer", "startTimeBetweenAttacks");
-        ShowOnEnum("spawnType", "RandomPosition", "startTimeBetweenAttacks");
-        ShowOnEnum("spawnType", "SetPosition", "startTimeBetweenAttacks");
-        ShowOnEnum("spawnType", "InIncrements", "startTimeBetweenAttacks");
-        ShowOnEnum("spawnType", "InCircle", "startTimeBetweenAttacks");
+        ShowOnEnum("spawnType", "RandomPosition", "spawnMinRandomX");
+        ShowOnEnum("spawnType", "RandomPosition", "spawnMaxRandomX");
+        ShowOnEnum("spawnType", "RandomPosition", "spawnMinRandomY");
+        ShowOnEnum("spawnType", "RandomPosition", "spawnMaxRandomY");
 
-        ShowOnEnum("spawnType", "RelativeToEnemy", "attackPrefab");
-        ShowOnEnum("spawnType", "RelativeToPlayer", "attackPrefab");
-        ShowOnEnum("spawnType", "RandomPosition", "attackPrefab");
-        ShowOnEnum("spawnType", "SetPosition", "attackPrefab");
-        ShowOnEnum("spawnType", "InIncrements", "attackPrefab");
-        ShowOnEnum("spawnType", "InCircle", "attackPrefab");
+        ShowOnEnum("spawnType", "Set", "spawnSetX");
+        ShowOnEnum("spawnType", "Set", "spawnSetY");
+
+        ShowOnEnum("spawnType", "InIncrements", "spawnStartIncrementX");
+        ShowOnEnum("spawnType", "InIncrements", "spawnStartIncrementY");
+        ShowOnEnum("spawnType", "InIncrements", "spawnIncrementalDistance");
+
+        ShowOnEnum("spawnType", "InCircle", "spawnCircleAmplitude");
+
     }
 }
 
