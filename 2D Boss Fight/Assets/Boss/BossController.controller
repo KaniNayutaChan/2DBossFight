@@ -190,10 +190,6 @@ MonoBehaviour:
   movementSetY: 0
   transitionType: 0
   startTimeTillNextAnimation: 0
-  numberOfAttacks: 0
-  startTimeTillAttack: 0
-  startTimeBetweenAttacks: 0
-  attackPrefab: {fileID: 0}
   spawnTimingType: 0
   spawnType: 0
   spawnRelativeToPlayerX: 0
@@ -210,6 +206,10 @@ MonoBehaviour:
   spawnStartIncrementY: 0
   spawnIncrementalDistance: 0
   spawnCircleAmplitude: 0
+  attackPrefab: {fileID: 0}
+  numberOfAttacks: 0
+  startTimeTillAttack: 0
+  startTimeBetweenAttacks: 0
 --- !u!114 &9093821973803915801
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,7 +225,7 @@ MonoBehaviour:
   nextAnimation: 
   speed: 0
   directionType: 0
-  movementTypeX: 2
+  movementTypeX: 0
   movementRelativeToEnemyX: 0
   movementRelativeToPlayerX: 0
   movementMinRandomX: 0
