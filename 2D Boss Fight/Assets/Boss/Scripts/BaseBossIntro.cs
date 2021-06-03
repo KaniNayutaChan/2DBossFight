@@ -18,12 +18,11 @@ public class BaseBossIntro : BaseBoss
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
         isAwake = false;
+        nextAnimation = "Idle";
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateUpdate(animator, stateInfo, layerIndex);
-
         if(Vector2.Distance(enemyPos.position, playerPos.position) < visionRange)
         {
             isAwake = true;
@@ -37,7 +36,7 @@ public class BaseBossIntro : BaseBoss
             }
             else
             {
-                animator.Play("Idle");
+                Transition(animator);
             }
         }
     }

@@ -12,6 +12,12 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 4117505005715052941}
     m_Position: {x: 210, y: 110, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -3132757894193548311}
+    m_Position: {x: 210, y: 150, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4572846875572613822}
+    m_Position: {x: 210, y: 190, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -22,6 +28,63 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 4117505005715052941}
+--- !u!1102 &-3132757894193548311
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: 9093821973803915801}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!114 &-1998309268893222963
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421a7c8f8e8d88d43918a05c06bec356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextAnimation: 
+  speed: 0
+  directionType: 0
+  movementTypeX: 0
+  movementTypeY: 0
+  relativeToEnemyX: 0
+  relativeToEnemyY: 0
+  relativeToPlayerX: 0
+  relativeToPlayerY: 0
+  minRandomX: 0
+  maxRandomX: 0
+  minRandomY: 0
+  maxRandomY: 0
+  setX: 0
+  setY: 0
+  transitionType: 0
+  visionRange: 5
+  timeTillIdle: 1
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -55,7 +118,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -1998309268893222963}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -70,3 +134,96 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &4572846875572613822
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attack
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: 7913227955820441585}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 0}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!114 &7913227955820441585
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3b0520ba0352144cb3618396c053eb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextAnimation: 
+  speed: 0
+  directionType: 0
+  movementTypeX: 0
+  movementTypeY: 0
+  relativeToEnemyX: 0
+  relativeToEnemyY: 0
+  relativeToPlayerX: 0
+  relativeToPlayerY: 0
+  minRandomX: 0
+  maxRandomX: 0
+  minRandomY: 0
+  maxRandomY: 0
+  setX: 0
+  setY: 0
+  transitionType: 0
+  startTimeTillNextAnimation: 0
+  numberOfAttacks: 0
+  startTimeTillAttack: 0
+  startTimeBetweenAttacks: 0
+  attackPrefab: {fileID: 0}
+  spawnTimingType: 0
+  spawnType: 6
+--- !u!114 &9093821973803915801
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46416701c8f15144ea8131666758ee7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextAnimation: 
+  speed: 0
+  directionType: 0
+  movementTypeX: 2
+  movementTypeY: 0
+  relativeToEnemyX: 0
+  relativeToEnemyY: 0
+  relativeToPlayerX: 0
+  relativeToPlayerY: 0
+  minRandomX: 0
+  maxRandomX: 0
+  minRandomY: 0
+  maxRandomY: 0
+  setX: 0
+  setY: 0
+  transitionType: 0
+  attackList: []
+  minStartTimeTillAttack: 0.5
+  maxStartTimeTillAttack: 1
